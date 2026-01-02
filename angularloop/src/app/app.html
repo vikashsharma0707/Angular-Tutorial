@@ -1,0 +1,52 @@
+
+
+
+
+
+@for(user of users;track user){
+  <li>{{user}}</li>
+}
+
+<h1>Empyt loop</h1>
+
+
+@for(user of products;track user){
+  <li>{{user}}</li>
+}@empty{
+  <h1>No product found</h1>
+}
+
+
+<div>
+  <h2>Employee Table</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (employee of employees; track employee.id; let idx = $index, isFirst = $first, isLast = $last) {
+        <tr [class.first-row]="isFirst" [class.last-row]="isLast">
+          <td>{{ idx + 1 }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.role }}</td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="3">No employees found.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .first-row { background-color: lightgreen; }
+  .last-row { background-color: lightcoral; }
+</style>
+
+
+<app-contextualvariables></app-contextualvariables>

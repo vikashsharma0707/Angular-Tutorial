@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: darkcyan;
+}

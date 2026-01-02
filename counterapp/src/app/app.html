@@ -1,0 +1,47 @@
+<div class="page">
+  <div class="card">
+    <header class="card-header">
+      <h1>Stylish Counter</h1>
+      <p class="subtitle">Simple, responsive & animated counter</p>
+    </header>
+
+    <main class="card-body">
+      <!-- Use counter() when comparing or showing -->
+      <div class="display" [class.positive]="counter() > 0" [class.negative]="counter() < 0">
+        <span class="counter-value">{{ counter() }}</span>
+      </div>
+
+      <div class="controls">
+        <div class="step-control">
+          <label>Step</label>
+          <!-- Can't use [(ngModel)] with a Signal directly.
+               Use [ngModel] + (ngModelChange) to set signal -->
+          <input
+            type="number"
+            [ngModel]="step()"
+            (ngModelChange)="step.set($event)"
+            min="1"
+          />
+        </div>
+
+        <div class="buttons">
+          <button class="btn ghost" (click)="decrement()" aria-label="Decrement">−</button>
+          <button class="btn primary" (click)="increment()" aria-label="Increment">+</button>
+          <button class="btn neutral" (click)="reset()" aria-label="Reset">Reset</button>
+        </div>
+
+        <div class="extras">
+          <button class="btn ghost" (click)="setRandom()">Random</button>
+          <button class="btn auto" [class.running]="isRunning()" (click)="toggleAuto()">
+            <span *ngIf="!isRunning()">Start</span>
+            <span *ngIf="isRunning()">Stop</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="card-footer">
+      <small>Made with Angular • Vikash</small>
+    </footer>
+  </div>
+</div>

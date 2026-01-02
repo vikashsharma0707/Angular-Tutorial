@@ -1,0 +1,18 @@
+<h1>Angular Interpolation Example</h1>
+
+<!-- Single Value Display -->
+<p><b>Name:</b> {{ name }}</p>
+<p><b>Age:</b> {{ age }}</p>
+<p><b>Active:</b> {{ isActive }}</p>
+
+<!-- Array Display -->
+<p><b>Skills:</b> {{ skills }}</p>
+
+<!-- Loop through Array (ngFor) -->
+<h3>List of Skills:</h3>
+<ul>
+  <li *ngFor="let skill of skills">{{ skill }}</li>
+</ul>
+
+<!-- Function Call on Button Click -->
+<button (click)="showDetails()">Show Details in Console</button>

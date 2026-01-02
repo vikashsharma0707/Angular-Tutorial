@@ -1,0 +1,11 @@
+<p>angulartooglebutton works!</p>
+<div>
+  <button (click)="toggleContent()">{{ buttonText }}</button>
+  
+  @if (isVisible) {
+    <div style="margin-top: 10px; padding: 10px; background: lightblue;">
+      <h3>This content has been toggled!</h3>
+      <p>Click the button to hide it. Using Angular 18's new syntax.</p>
+    </div>
+  }
+</div>

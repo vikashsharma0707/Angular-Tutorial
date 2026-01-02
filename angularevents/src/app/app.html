@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Event Demo in Angular</h1>
+
+  <!-- CLICK EVENT -->
+  <button (click)="handleClick()">Click Me</button>
+
+  <!-- INPUT, FOCUS, BLUR EVENTS -->
+  <input
+    type="text"
+    placeholder="Type something..."
+    (input)="handleInput($event)"
+    (focus)="handleFocus()"
+    (blur)="handleBlur()"
+  />
+
+  <p><strong>Input Value:</strong> {{ inputValue }}</p>
+
+  <!-- MOUSE ENTER/LEAVE EVENTS -->
+  <div
+    class="hover-box"
+    [style.background-color]="boxColor"
+    (mouseenter)="handleMouseEnter()"
+    (mouseleave)="handleMouseLeave()"
+  >
+    Hover Over Me
+  </div>
+
+  <h3>{{ message }}</h3>
+</div>

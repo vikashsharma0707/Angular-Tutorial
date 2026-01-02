@@ -1,0 +1,32 @@
+<p>angularswitch works!</p>
+
+
+
+<button   (click)="handlecolor('red')">Red</button>
+<button   (click)="handlecolor('green')">Green</button>
+<button   (click)="handlecolor('blue')">Blue</button>
+<button   (click)="handlecolor('yellow')">Yellow</button>
+<button   (click)="handlecolor('brown')">Brown</button>
+
+
+@switch(color){
+    @case('red'){
+        <h1  style="background-color: red;">Red color</h1>
+    }
+
+    @case('green'){
+        <h1  style="background-color: green;">Green color</h1>
+    }
+
+    @case('blue'){
+        <h1  style="background-color: blue;">blue color</h1>
+    }
+
+    @case('yellow'){
+        <h1  style="background-color: yellow;">Yellow color</h1>
+    }
+
+    @default{
+        <h1  style="background-color: black ">No color match</h1>
+    }
+}

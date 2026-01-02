@@ -1,0 +1,19 @@
+<h2>Reactive Form Example</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input type="text" formControlName="name">
+
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+
+  <button type="submit">Submit</button>
+</form>
+
+<p *ngIf="submitted">Form Submitted! {{ formData | json }}</p>
+
+
+
+<app-validation></app-validation>
+<app-templeteform></app-templeteform>
+<app-templeteformvalidation></app-templeteformvalidation>

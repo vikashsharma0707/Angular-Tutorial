@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Get & Set Input Field Value (Angular)</h2>
+
+  <!-- Two-way data binding -->
+  <input type="text" [(ngModel)]="username" placeholder="Enter your name" />
+
+  <div class="buttons">
+    <button (click)="getValue()">Get Value</button>
+    <button (click)="setValue()">Set Value</button>
+    <button (click)="clearValue()">Clear</button>
+  </div>
+
+  <p><strong>Live Value:</strong> {{ username }}</p>
+</div>
